@@ -26,8 +26,9 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <?php if(isset($_SESSION["id"])){?>
               <form class="form-inline my-2 my-lg-0">
-              <span class="username"><?= $_SESSION["username"] ?> 
-              <a href="<?= base_url("activity")?>" class="btn my-2 my-sm-0 activity" type="button"><i class="fa fa-th-list"></i></a>
+              <span class="username"><?= $_SESSION["username"] ?> </span>
+              <a href="<?= base_url("donate")?>" class="btn my-2 my-sm-0 don" type="button"><i class="fa fa-gift"></i></a>
+              <a href="<?= base_url("activity/1")?>" class="btn my-2 my-sm-0 activity" type="button"><i class="fa fa-th-list"></i></a>
               <a href="<?= base_url("dashboard/logout")?>" class="btn my-2 my-sm-0 logout" type="button"><i class="fa fa-sign-out"></i></a>
               </form>
               <?php }?>

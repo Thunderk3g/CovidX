@@ -13,30 +13,37 @@ $this->load->view('templates/header');?>
     <div class="container">
     <div class="row counters">
         <div class="col-3">
+            <a href="<?= base_url("forgot")?>" class="remove">
             <div class="container bg-1">
             <img src="<?= base_url("assets/img/1.png")?>" alt="" class="thumbnail">
              <span class="status">Active</span>
              <span class="number">2454578</span>
              <span class="increase-decrease">+89999</span>
              </div>
+             </a>
             </div>
         <div class="col-3">
+        <a href="<?= base_url("forgot")?>" class="remove">
             <div class="container bg-2">
             <img src="<?= base_url("assets/img/2.png")?>" alt="" class="thumbnail">
             <span class="status">Closed</span>
             <span class="number">2454578</span>
              <span class="increase-decrease">+89999</span>
              </div>
+             </a>
         </div>
         <div class="col-3">
-            <div class="container bg-3">
+        <a href="<?= base_url("forgot")?>" class="remove">
+        <div class="container bg-3">
         <img src="<?= base_url("assets/img/3.png")?>" alt="" class="thumbnail">
             <span class="status">Deaths</span>
             <span class="number">2454578</span>
              <span class="increase-decrease">+89999</span>
              </div>
+        </a>
         </div>
         <div class="col-3">
+        <a href="<?= base_url("forgot")?>" class="remove">
             <div class="container bg-4">
         <img src="<?= base_url("assets/img/4.png")?>" alt="" class="thumbnail">
          <span class="status">Recovered</span>
@@ -44,6 +51,7 @@ $this->load->view('templates/header');?>
              <span class="increase-decrease">+89999</span>
              </div>
         </div>
+        </a>
     </div>
     </div>
     <style>

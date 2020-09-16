@@ -53,3 +53,4 @@ $route['default_controller'] = 'login';
 $route['404_override'] = 'CustomError';
 $route['translate_uri_dashes'] = TRUE;
 $route['user/(:num)'] = 'dashboard/getDataOfLogin/$1';
+$route['activity/(:num)'] = 'activity/index/$1';
