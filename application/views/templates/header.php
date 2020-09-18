@@ -14,6 +14,7 @@
     <script src="<?= base_url("assets/js/d3.min.js")?>"></script>
     <script src="<?= base_url("assets/js/topojson.min.js")?>"></script>
     <script src="<?= base_url("assets/js/datamaps.world.min.js")?>"></script>
+ 
     <title>COVID X | Covid Tracker</title>
       </head>
         <body>
@@ -27,6 +28,7 @@
               <?php if(isset($_SESSION["id"])){?>
               <form class="form-inline my-2 my-lg-0">
               <span class="username"><?= $_SESSION["username"] ?> </span>
+              <a href="<?= base_url("report")?>" class="btn my-2 my-sm-0 med" type="button"><i class="fa fa-ambulance"></i></a>
               <a href="<?= base_url("donate")?>" class="btn my-2 my-sm-0 don" type="button"><i class="fa fa-gift"></i></a>
               <a href="<?= base_url("activity/1")?>" class="btn my-2 my-sm-0 activity" type="button"><i class="fa fa-th-list"></i></a>
               <a href="<?= base_url("dashboard/logout")?>" class="btn my-2 my-sm-0 logout" type="button"><i class="fa fa-sign-out"></i></a>

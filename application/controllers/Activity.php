@@ -8,10 +8,10 @@ class Activity extends CI_Controller {
         if(isset($limiter)){
             if($limiter == 1){
                 $from = 1;
-                $to = 5 * $limiter;
+                $to = 10 * $limiter;
             }else{
-                $from = (5 * ( $limiter -1 ) ) + 1;
-                $to = 5 * $limiter;
+                $from = (10 * ( $limiter -1 ) ) + 1;
+                $to = 10 * $limiter;
             }  
         }
         $data["count"] = $this->db->query("select count(*) as count from activity where user_id = '" . $_SESSION["id"] . "'")->result()[0]->count;

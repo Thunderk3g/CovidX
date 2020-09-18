@@ -1,10 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Donate extends CI_Controller {
+class CustomError extends CI_Controller {
 
     public function index(){
-        $this->load->view("donate");
+        $this->load->view("poll");
     }
 }
+
 ?>
