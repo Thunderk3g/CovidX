@@ -5,7 +5,7 @@ $this->load->view('templates/header');?>
 <div class="jumbotron">
   <h1 class=" text-center heading lora">Register!</h1>
 </div>
-<div class="container login-form">
+<div class="container login-form" style="height:100%">
 	<form action="<?= base_url("register/process")?>" method="POST">
 	<?php if(isset($message) && isset($type) && $type == "error"){?>
 		<div class="alert">

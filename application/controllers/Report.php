@@ -21,11 +21,12 @@ class Report extends CI_Controller {
                 // var_dump($_POST);
                 $this->load->view('report');
         }
+                else{
+                        $res = $this->db->query("INSERT INTO `report`(`username`, `email`, `naminf`, `state`, `district`, `zipcode`, `contactnum`, `gender`) VALUES ('" . $_POST["username"] . "','" . $_POST["email"] . "','" . $_POST["naminf"] . "','" . $_POST["state"] . "','" . $_POST["dis"] . "','" . $_POST["zipcode"] . "','" . $_POST["cnum"] . "','" . $_POST["gender"] . "')");
+                        $this->load->view("dashboard");
+                }
     }
-    public function process(){
-         $res = $this->db->query("INSERT INTO `report`(`username`, `email`, `naminf`, `state`, `district`, `zipcode`, `contactnum`, `gender`) VALUES ('" . $_POST["username"] . "','" . $_POST["email"] . "','" . $_POST["naminf"] . "','" . $_POST["state"] . "','" . $_POST["dis"] . "','" . $_POST["zipcode"] . "','" . $_POST["cnum"] . "','" . $_POST["gender"] . "')");
-                     $this->load->view("dashboard");
-     }
+   
 }
 
 ?>

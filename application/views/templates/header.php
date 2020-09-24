@@ -14,11 +14,12 @@
     <script src="<?= base_url("assets/js/d3.min.js")?>"></script>
     <script src="<?= base_url("assets/js/topojson.min.js")?>"></script>
     <script src="<?= base_url("assets/js/datamaps.world.min.js")?>"></script>
+    <script src="<?= base_url("assets/js/chart.bundle.min.js")?>"></script>
  
     <title>COVID X | Covid Tracker</title>
       </head>
         <body>
-          <div class="container-fluid fullpage">
+          <div class="container-fluid ">
             <nav class="navbar navbar-expand-lg navbar-light">
               <a class="navbar-brand lora" href="<?= base_url()?>">COVIDX </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

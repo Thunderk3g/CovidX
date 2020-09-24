@@ -38,10 +38,9 @@
     padding:20px;
     text-align: center;
   }
-  .fullpage{
-    height:100vh;
-    background-color: #000000;
-    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+  body{
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
   }
   nav{
     background:transparent !important;
@@ -212,6 +211,7 @@
     font-size:30px;
     color:#fff;
     font-weight: 600;
+    margin-bottom: 40px;
   }
   .heading-block{
     margin-bottom: 25px;
@@ -222,35 +222,36 @@
     color:#fff;
     font-weight: 400;
   }
-  .counters  .col-3 .container{
+  .counters  .col-md-3 .container{
     margin-right:0px;
     margin-left:0px;
-    margin-bottom: 80px;
-    height: 180px;
+    margin-bottom: 50px;
+    height: 150px;
   }
-  .counters .col-3 .container img{
+  .counters .col-md-3 .container img{
     display: block;
     position:relative;
     padding-top:24px;
     left:53%;
     transform:translateX(-50%);
+    margin-bottom: 5px;
   }
-  .counters .col-3 .container span{
+  .counters .col-md-3 .container span{
     display: block;
     text-align: center;
   }
-  .counters .col-3 .container span:nth-child(2){
-    font-size: 20px;
+  .counters .col-md-3 .container span:nth-child(2){
+    font-size: 15px;
     color:#fff;
   }
   .number{
     color:#fff;
     font-weight: 600;
-    font-size:30px;
+    font-size:15px;
   }
   .increase-decrease{
     color:#fff;
-    font-size:16px;
+    font-size:12px;
     font-weight: 600;
   }
   .activity-table{
@@ -670,3 +671,93 @@
     background: #7b7b7b;
   }
   
+  .outer{
+    background: #191F2B;
+    border-radius: 20px;
+}
+.new{
+    height: 180px;
+}
+.news{
+    color: #fff;
+    font-size:30px;
+    font-weight: 600;
+    display: block;
+
+}
+.instructText{
+    margin-top: 20px;
+    color: #fff;
+}
+.ul{
+    color:#fff;
+}
+.ul:hover{
+    color:#fff;
+}
+.chart-container{
+    margin-top: 20px;
+    height: 500px;
+    width:100%
+}
+.sliders {
+    overflow:auto;
+    margin-top:0px;
+    height:35px;
+    width:fit-content;
+    transform: translateX();
+}
+
+.slide-item {
+  display: inline-block;
+  background: #000000;
+  color:#fff;
+  padding: 5px 7px 0px 7px;
+  height: 35px;
+  border-radius: 3px;
+}
+.slide-item:hover{
+  background: #e5e5e5;
+  color:#000000;
+  display: inline-block;
+  padding: 5px 7px 0px 7px;
+  height: 35px;
+  border-radius: 3px;
+}
+
+.slide-name{
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.slide-number{
+  color: #f21515;
+}
+.slider-parent{
+  overflow: auto;
+}
+#myChart {
+  background: #191F2B;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#chartdiv {
+  max-width: 100%;
+  height: 800px;
+  background-color:#212327;
+}
+.worldmap{
+  margin-top: 20px;
+  border-radius: 20px;
+
+}
+#Chart {
+  background: #191F2B;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+body {

@@ -1,10 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('templates/header');?>
-<div class="container main-content">
+<div class="container main-content" style="height:100vh">
 <div class="jumbotron">
   <h1 class=" text-center heading lora">Sign in!</h1>
 </div>
+
 <div class="container login-form">
 	<form action="<?= base_url("login/process")?>" method="POST">
 	<?php if(isset($message) && isset($type) && $type == "error"){?>

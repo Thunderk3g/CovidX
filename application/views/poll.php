@@ -14,13 +14,7 @@ $this->load->view('templates/header');?>
         Today's Poll 
 </span>  
 <div class="container outer">
-<?php if(!empty($voted) && $voted === 1) {
-        echo '<div class="alert alert-success">Your have voted successfully.</div>';
-      }
-      else if(!empty($voted)  && $voted === 2) {
-        echo '<div class="alert alert-danger">Your had already voted.</div>';
-      }
-      ?>
+
 <div class="container new">
 <div class="black_box">
     

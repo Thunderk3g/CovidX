@@ -4,8 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Dashboard extends CI_Controller {
 
     public function index(){
-           if(isset($_SESSION["id"])){
-                $this->load->view("dashboard");
+           if(isset($_SESSION["id"])){    
+                 $data['summary'] = $this->summary();    
+                 $data["cases_log"] = $this->db->query("select cases.district,cases.total_cases from cases ")->result_array();
+                
+                 $this->load->view("dashboard",$data);
             } else {
                 redirect(base_url());
             }
@@ -31,4 +34,9 @@ class Dashboard extends CI_Controller {
             redirect(base_url(""));
         }
     }
+    public function summary(){
+        return $this->APImodel->getSummary();
+    }
+  
+    
 }

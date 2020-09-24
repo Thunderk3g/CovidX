@@ -7,7 +7,7 @@ label {color:white;} .error{    color: red;
 font-size: 10px;} 
 </style>
 <h1 class=" text-center heading lora">Report a Case?</h1>
-<form action="<?= base_url("report/process")?>" method="POST">
+<form action="<?= base_url("report/index")?>" method="POST">
 <label>Username</label>
 <input type="text" class="form-control" name="username"  value="<?php echo set_value('username'); ?>" size="50" />
 <span class="error"><?php echo form_error('username', '<div class="error">', '</div>'); ?></span>
