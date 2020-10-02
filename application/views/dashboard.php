@@ -78,11 +78,16 @@ $this->load->view('templates/header');?>
 <div class="col-md-4 col-sm-12">
 <div class="container outer">
     <div class="container new">
-    <span class="news text-center">Whats New?</span>
-    <ul class="instructText">
-          <a href="<?= base_url("poll")?>" class="ul">  <li>Do You Think You Have Corona?-VOTE NOW ! </li></a>
-          <a href="" class="ul">  <li>Need Medical Assistance ?</li> </a>
-        </ul>
+    <h1 class="heading-counter">What's New</h1>
+
+        <ul class="news">
+        <?php foreach ($rss['items'] as $key => $value) {?>
+        <li>
+        <a href="<?= $value->link ?>">
+        <span style="color: #ffffff;"></span>
+        <?= $value->title ?></a>
+         </li>
+        <?php }?>
 
     </div>
 </div>

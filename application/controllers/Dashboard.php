@@ -5,6 +5,7 @@ class Dashboard extends CI_Controller {
 
     public function index(){
            if(isset($_SESSION["id"])){    
+                $data['rss'] = $this->parseRss();
                  $data['summary'] = $this->summary();    
                  $data["cases_log"] = $this->db->query("select cases.district,cases.total_cases from cases ")->result_array();
                 
@@ -37,6 +38,41 @@ class Dashboard extends CI_Controller {
     public function summary(){
         return $this->APImodel->getSummary();
     }
-  
-    
+     
+    public function parseRss(){
+        $this->benchmark->mark('code_start');
+
+        $rss = $this->APImodel->WHORSSFEED();
+        $parse = simplexml_load_string($rss);
+        $version = $parse['version'];
+        $channel = $parse->channel;
+        $title = $channel->title;
+        $link = $channel->link;
+        $description = $channel->description;
+        $newsItems = $channel->item;
+        
+        $this->benchmark->mark('code_end');
+        $elapsed_time = $this->benchmark->elapsed_time('code_start', 'code_end');
+        return array(
+            'version'=>$version,
+            'channel'=>$channel,
+            'title'=>$title,
+            'link'=>$link,
+            'description',$description,
+            'items'=>$newsItems,
+            'elapsed_time'=>$elapsed_time
+        );
+    }
+    public function request($key){
+        $result = $this->db->query('select * from cases where District like "%' . $key . '%"');
+        if($result->num_rows() != 0){
+        echo json_encode($result->result_array());
+        }
+        else{
+            echo json_encode(array());
+        }
+    }
+    public function request2(){
+        echo json_encode($_POST);
+    }
 }

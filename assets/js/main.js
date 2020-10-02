@@ -1,14 +1,3 @@
-/**
- * ---------------------------------------
- * This demo was created using amCharts 4.
- * 
- * For more information visit:
- * https://www.amcharts.com/
- * 
- * Documentation is available at:
- * https://www.amcharts.com/docs/v4/
- * ---------------------------------------
- */
 
 // Themes begin
 am4core.useTheme(am4themes_animated);
@@ -1655,4 +1644,28 @@ am4core.ready(function() {
   }
 });
 
+    $(document).on("keyup","#search",function(event){
+      if($(this).val() === ""){
+        $(".results").hide();
+        $(".results").text('')
+      }
+      else
+      $(".results").show();
+// // Fire off the request to /form.php
+let request = $.ajax({
+  url: "dashboard/request/" + $(this).val() ,
+  type: "get"
+});
 
+// // Callback handler that will be called on success
+request.done(function (response, textStatus, jqXHR){
+  // Log a message to the console
+  let decode = JSON.parse(response);
+  decode.forEach(element => {
+    let string = '<div class="resultitem"><span class="name">' + element.District + '</span><span class="cases">Cases</span><span class="rate">Positivity Rate</span></div>';
+    console.log(string);
+    $(".results").append(string);
+  });
+});
+
+});

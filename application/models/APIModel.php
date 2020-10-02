@@ -27,6 +27,10 @@ class APImodel extends CI_Model {
         $response = json_decode($get_data, true);
         return $response;
     }
+    public function WHORSSFEED(){
+        $get_data = $this->callAPI('GET', 'https://www.who.int/rss-feeds/news-english.xml', false);
+        return $get_data;
+    }
 }
 
 ?>

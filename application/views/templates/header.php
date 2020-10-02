@@ -27,6 +27,8 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <?php if(isset($_SESSION["id"])){?>
+               <input type="search" class="form-control search" name="search" id="search">
+              <div class="results" style="display:none;"></div>
               <form class="form-inline my-2 my-lg-0">
               <span class="username"><?= $_SESSION["username"] ?> </span>
               <a href="<?= base_url("report")?>" class="btn my-2 my-sm-0 med" type="button"><i class="fa fa-ambulance"></i></a>
